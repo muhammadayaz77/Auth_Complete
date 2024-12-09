@@ -8,9 +8,8 @@ let app = express();
 
 app.use(express.json());
 connectDB();
-app.use('/api/auth',Route)
-app.use('/api/users',userRoute)
-// app.use('/api/user',Route)
+app.use('/api/auth',Route);
+app.use('/api/users',userRoute);
 app.listen(3000,() => {
   console.log('http://localhost:3000');
 })

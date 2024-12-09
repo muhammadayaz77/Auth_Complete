@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import User from "../Model/userModel.mjs";
 import jwt from 'jsonwebtoken';
 
@@ -6,7 +5,7 @@ let generateJWT = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET);
 };
 
-export let registerUser = async (req, res) => {
+export let  registerUser = async (req, res) => {
   try {
     let { username, password, email } = req.body;
     
